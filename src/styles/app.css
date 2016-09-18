@@ -1,0 +1,34 @@
+.board {
+    display: table;
+    width: 90vmin;
+    height: 90vmin;
+    padding: 5vmin;
+}
+
+.board-row {
+    display: table-row;
+}
+
+  .board-row:nth-child(odd) .board-cell:nth-child(even){
+    background-color: #C0C0C0;
+  }
+
+  .board-row:nth-child(even) .board-cell:nth-child(odd){
+    background-color: #C0C0C0;
+  }
+
+.board-cell {
+    font-size: calc(90vmin / 12.5);
+    height: 12.5%;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+  .board-cell.is-legal-move {
+      background-color: lightcoral !important;
+  }
+
+  .board-cell.is-active-square {
+      background-color: red !important;
+  }
