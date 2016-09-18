@@ -13,11 +13,18 @@ export default React.createClass({
         return [
             'square',
             this.props.isActive ? 'active' : '',
-            this.props.isLegalMoveForActiveSquare ? 'legal' : ''
+            this.props.isLegalMoveForActiveSquare ? 'legal' : '',
+            this.props.isMovable ? 'movable' : ''
         ].join(' ')
     },
 
-    onClick(){
+    onClick(event){
+
+        if (this.props.isLegalMoveForActiveSquare){
+            this.props.makeMove()
+            return
+        }
+
         this.props.isActive ? this.props.clearActiveSquare() : this.props.setAsActiveSquare()
     }
 

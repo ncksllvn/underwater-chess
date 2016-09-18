@@ -10,13 +10,13 @@
     display: table-row;
 }
 
-  .board-row:nth-child(odd) .square:nth-child(even){
-    background-color: #C0C0C0;
-  }
+    .board-row:nth-child(odd) .square:nth-child(even){
+        background-color: #C0C0C0;
+    }
 
-  .board-row:nth-child(even) .square:nth-child(odd){
-    background-color: #C0C0C0;
-  }
+    .board-row:nth-child(even) .square:nth-child(odd){
+        background-color: #C0C0C0;
+    }
 
 .square {
     font-size: calc(90vmin / 12.5);
@@ -29,7 +29,11 @@
         background-color: red !important;
     }
 
-  .square.legal {
-      background-color: lightcoral !important;
-  }
+    .square.legal {
+        background-color: lightcoral !important;
+    }
+
+    .square.movable:hover {
+        background: lightpink !important;
+    }
 
