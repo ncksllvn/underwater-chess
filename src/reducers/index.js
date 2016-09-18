@@ -1,8 +1,18 @@
 import {combineReducers} from 'redux'
-import {UPDATE_BOARD} from '../actions'
+import {UPDATE_BOARD, UPDATE_ACTIVE_SQUARE} from '../actions'
 
 const initialState = {
-    board: {}
+    board: {},
+    activeSquareId: ''
+}
+
+function activeSquareId(state=initialState.activeSquareId, action){
+    switch (action.type){
+        case UPDATE_ACTIVE_SQUARE:
+            return action.squareId
+        default:
+            return state
+    }
 }
 
 function board(state=initialState.board, action){
@@ -14,4 +24,4 @@ function board(state=initialState.board, action){
     }
 }
 
-export default combineReducers({ board })
+export default combineReducers({ board, activeSquareId })

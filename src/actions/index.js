@@ -3,6 +3,7 @@ require('isomorphic-fetch')
 
 import config from 'config'
 
+export const UPDATE_ACTIVE_SQUARE = 'UPDATE_ACTIVE_SQUARE'
 export const UPDATE_BOARD = 'UPDATE_BOARD'
 
 export function getBoardInfo(fen='', move=''){
@@ -18,6 +19,13 @@ export function getBoardInfo(fen='', move=''){
         return fetch(url).
             then(res => res.json()).
             then(board => dispatch(updateBoard(board)))
+    }
+}
+
+export function updateActiveSquare(squareId=''){
+    return {
+        type: UPDATE_ACTIVE_SQUARE,
+        squareId
     }
 }
 
