@@ -38,7 +38,7 @@ const symbols = {
 }
 
 
-export default ({board}) => {
+export default function({board}) {
 
     // convert from FEN to a 2D array
     board = parseFen(board.fen)
@@ -58,7 +58,7 @@ export default ({board}) => {
     )
 }
 
-const parseFen = (fen) => {
+function parseFen(fen) {
 
     const boardFen = fen.split(' ')[0]
     const boardFenRows = boardFen.split('/')
