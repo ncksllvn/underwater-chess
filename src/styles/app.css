@@ -24,19 +24,26 @@
     display: table-cell;
     text-align: center;
     vertical-align: middle;
+    cursor: default;
 }
 
     .square.movable:not(.active):hover {
-        background: lightpink !important;
+        background-color: #29FD2E !important;
+        cursor: pointer;
     }
 
     .square.active {
-        background-color: red !important;
+        background-color: #29FD2E !important;
     }
 
     .square.legal {
-        background-color: lightcoral !important;
+        background-color: #B5FEB6 !important;
+        cursor: pointer;
     }
+
+        .square.legal:hover {
+            background-color: #9CFD9D !important;
+        }
 
 
 
