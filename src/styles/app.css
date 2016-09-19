@@ -25,6 +25,11 @@
     text-align: center;
     vertical-align: middle;
 }
+
+    .square.movable:not(.active):hover {
+        background: lightpink !important;
+    }
+
     .square.active {
         background-color: red !important;
     }
@@ -33,7 +38,5 @@
         background-color: lightcoral !important;
     }
 
-    .square.movable:hover {
-        background: lightpink !important;
-    }
+
 
