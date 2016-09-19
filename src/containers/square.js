@@ -5,6 +5,10 @@ import Square from  '../components/square'
 
 const mapStateToProps = (state, ownProps) => {
 
+    if (state.board.turn.color == 'black'){
+        return {}
+    }
+
     const activeSquareId = state.activeSquareId
     const legalMoves = state.board.turn.legalMoves
 

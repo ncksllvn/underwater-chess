@@ -29,7 +29,21 @@ export function makeMove(toSquare){
         const fromSquare = getState().activeSquareId
         const move = `${fromSquare}${toSquare}`
 
-        return dispatch(getBoardInfo(move))
+        return dispatch(getBoardInfo(move)).
+            then(() => dispatch(doComputerMove()))
+    }
+}
+
+export function doComputerMove(){
+    return function(dispatch, getState){
+
+        const bestMove = getState().board.turn.bestMove
+
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                dispatch(getBoardInfo(bestMove)).then(resolve)
+            }, 1000)
+        })
     }
 }
 
