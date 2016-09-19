@@ -1,3 +1,4 @@
+import 'normalize.css'
 import './styles/app.css'
 
 import 'core-js/fn/object/assign'
