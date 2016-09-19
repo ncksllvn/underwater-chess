@@ -1,3 +1,11 @@
+html {
+    height: 100%;
+    background-color: #38FED2;
+    background-position: left bottom;
+    background-size: auto 100%;
+    background-image: url(background.png);
+    background-repeat: repeat-x;
+}
 .board {
     display: table;
     width: 90vmin;
@@ -11,14 +19,16 @@
 }
 
     .board-row:nth-child(odd) .square:nth-child(even){
-        background-color: #C0C0C0;
+        background-color:  rgba(161,132,88, 0.7);
     }
 
     .board-row:nth-child(even) .square:nth-child(odd){
-        background-color: #C0C0C0;
+        background-color: rgba(161,132,88, 0.7);
     }
 
 .square {
+    color: #333;
+    background-color: rgba(214,197,138, 0.7);
     font-size: calc(90vmin / 12.5);
     height: 12.5%;
     display: table-cell;
@@ -34,22 +44,26 @@
                                     not supported by any browser */
 }
 
+    .square.white-piece {
+        color: #fff;;
+    }
+
     .square.movable:not(.active):hover {
-        background-color: #29FD2E !important;
+        background-color: rgba(41,253,46, 0.7) !important;
         cursor: pointer;
     }
 
     .square.active {
-        background-color: #29FD2E !important;
+        background-color: rgba(41,253,46, 0.7) !important;
     }
 
     .square.legal {
-        background-color: #B5FEB6 !important;
+        background-color: rgba(181,254,182, 0.7) !important;
         cursor: pointer;
     }
 
         .square.legal:hover {
-            background-color: #9CFD9D !important;
+            background-color: rgba(156,253,157, 0.7) !important;
         }
 
 
