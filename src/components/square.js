@@ -1,27 +1,12 @@
 import React from 'react'
-
-const king = 'k'
-const queen = 'q'
-const bishop = 'b'
-const knight = 'n'
-const rook = 'r'
-const pawn = 'p'
-
-const symbols = {
-    [king]: '\u265A',
-    [queen]: '\u265B',
-    [rook]: '\u265C',
-    [bishop]: '\u265D',
-    [knight]: '\u265E',
-    [pawn]: '\u265F'
-}
+import {SYMBOLS} from '../constants'
 
 export default React.createClass({
 
     render(){
         return (
             <div onClick={this.onClick} className={this.classList()}>
-                {this.props.symbol ? symbols[this.props.symbol.toLowerCase()] : ''}
+                {this.props.symbol ? SYMBOLS[this.props.symbol.toLowerCase()] : ''}
             </div>
         )
     },

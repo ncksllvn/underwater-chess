@@ -1,10 +1,7 @@
 import React from 'react'
 import Board from './board'
 import LoadingIndicator from './loading-indicator'
-
-const blackWins = '0-1'
-const whiteWins = '1-0'
-const tie = '1/2-1/2'
+import {RESULTS} from '../constants'
 
 export default React.createClass({
 
@@ -27,15 +24,15 @@ export default React.createClass({
         var message = ''
 
         switch (this.props.board.result){
-            case whiteWins:
+            case RESULTS.whiteWins:
                 message = 'You win!'
                 break
 
-            case blackWins:
+            case RESULTS.blackWins:
                 message = 'Computer wins!'
                 break
 
-            case tie:
+            case RESULTS.tie:
                 message = 'Tie!'
         }
 
