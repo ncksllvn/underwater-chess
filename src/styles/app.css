@@ -6,6 +6,7 @@ html {
     background-image: url(background.png);
     background-repeat: repeat-x;
 }
+
 .board {
     display: table;
     width: 90vmin;
@@ -66,5 +67,37 @@ html {
             background-color: rgba(156,253,157, 0.7) !important;
         }
 
+.loading-indicator {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(200,200,200,0.2);
+    animation: fade 1s linear normal;
+}
 
+.loading-indicator .loading-indicator-icon {
+    display: inline-block;
+    border: 1vmin solid #fff; /* Light grey */
+    border-top: 1vmin solid #28C2E6; /* Blue */
+    border-radius: 50%;
+    width: 5vmin;
+    height: 5vmin;
+    animation: spin 1s linear infinite;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    margin: 1vmin;
+}
 
+@keyframes fade {
+    0% { opacity: 0; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

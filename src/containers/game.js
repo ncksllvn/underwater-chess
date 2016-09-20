@@ -6,7 +6,8 @@ import Game from  '../components/game'
 const mapStateToProps = (state, ownProps) => {
     return {
         isInitialized: !!state.board.fen,
-        board: state.board
+        board: state.board,
+        isAwaitingBoardInfo: state.isAwaitingBoardInfo
     }
 }
 

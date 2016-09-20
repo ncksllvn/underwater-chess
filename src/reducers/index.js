@@ -1,9 +1,21 @@
 import {combineReducers} from 'redux'
-import {UPDATE_BOARD, UPDATE_ACTIVE_SQUARE} from '../actions'
+import {AWAIT_BOARD_INFO, UPDATE_BOARD, UPDATE_ACTIVE_SQUARE} from '../actions'
 
 const initialState = {
     board: {},
-    activeSquareId: ''
+    activeSquareId: '',
+    isAwaitingBoardInfo: false
+}
+
+function isAwaitingBoardInfo(state=initialState.isAwaitingBoardInfo, action){
+    switch (action.type){
+        case AWAIT_BOARD_INFO:
+            return true
+        case UPDATE_BOARD:
+            return false
+        default:
+            return state
+    }
 }
 
 function activeSquareId(state=initialState.activeSquareId, action){
@@ -24,4 +36,4 @@ function board(state=initialState.board, action){
     }
 }
 
-export default combineReducers({ board, activeSquareId })
+export default combineReducers({ board, activeSquareId, isAwaitingBoardInfo })

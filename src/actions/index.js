@@ -3,6 +3,7 @@ require('es6-promise').polyfill()
 import 'isomorphic-fetch'
 import config from 'config'
 
+export const AWAIT_BOARD_INFO = 'AWAIT_BOARD_INFO'
 export const UPDATE_ACTIVE_SQUARE = 'UPDATE_ACTIVE_SQUARE'
 export const UPDATE_BOARD = 'UPDATE_BOARD'
 
@@ -16,6 +17,8 @@ export function getBoardInfo(move=''){
             method: 'get',
             mode: 'cors'
         }
+
+        dispatch(awaitBoardInfo())
 
         return fetch(url).
             then(res => res.json()).
@@ -44,6 +47,12 @@ export function doComputerMove(){
                 dispatch(getBoardInfo(bestMove)).then(resolve)
             }, 1000)
         })
+    }
+}
+
+export function awaitBoardInfo(){
+    return {
+        type: AWAIT_BOARD_INFO
     }
 }
 

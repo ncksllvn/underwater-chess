@@ -1,5 +1,6 @@
 import React from 'react'
 import Board from './board'
+import LoadingIndicator from './loading-indicator'
 
 const blackWins = '0-1'
 const whiteWins = '1-0'
@@ -43,10 +44,13 @@ export default React.createClass({
     },
 
     render(){
+
         return (
             <div className="wrapper">
-                {this.props.isInitialized ? <Board board={this.props.board}/> : 'Loading...'}
+                {this.props.isInitialized ? <Board board={this.props.board}/> : ''}
+                {!this.props.isInitialized || this.props.isAwaitingBoardInfo ? <LoadingIndicator/> : '' }
             </div>
         )
     }
+
 })
