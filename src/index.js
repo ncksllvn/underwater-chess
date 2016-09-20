@@ -16,7 +16,7 @@ if (appEnv == 'dist'){
     store.subscribe(() => {
         const board = store.getState().board
         if (board.isGameOver && window.ga){
-            ga.send('game', 'play', 'Result', ANALYTICS_RESULTS[board.result])
+            ga('send', 'event', 'game', 'play', 'Result', ANALYTICS_RESULTS[board.result])
         }
     })
 }
