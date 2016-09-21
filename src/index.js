@@ -13,10 +13,11 @@ import config from 'config'
 const store = createStore()
 
 if (config.appEnv == 'dist'){
-    store.subscribe(() => {
+    let unsub = store.subscribe(() => {
         const board = store.getState().board
         if (board.isGameOver){
             ga('send', 'event', 'game', 'play', 'Result', ANALYTICS_RESULTS[board.result])
+            unsub()
         }
     })
 }
