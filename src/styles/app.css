@@ -9,6 +9,7 @@ html {
 
 .board {
     display: table;
+    table-layout: fixed;
     width: 90vmin;
     height: 90vmin;
     padding: 5vmin;
