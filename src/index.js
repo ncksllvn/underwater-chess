@@ -8,11 +8,11 @@ import {Provider} from 'react-redux'
 import Game from './containers/game'
 import createStore from './stores'
 import {ANALYTICS_RESULTS} from './constants'
-import {appEnv} from 'config'
+import config from 'config'
 
 const store = createStore()
 
-if (appEnv == 'dist'){
+if (config.appEnv == 'dist'){
     store.subscribe(() => {
         const board = store.getState().board
         if (board.isGameOver){
