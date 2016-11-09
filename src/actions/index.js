@@ -20,7 +20,7 @@ export function getBoardInfo(move=''){
 
         dispatch(awaitBoardInfo())
 
-        return fetch(url).
+        return fetch(url, options).
             then(res => res.json()).
             then(board => dispatch(updateBoard(board)))
     }
