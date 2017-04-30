@@ -1,7 +1,7 @@
 require('es6-promise').polyfill()
 
 import 'isomorphic-fetch'
-import config from 'config'
+import config from '../config'
 
 export const AWAIT_BOARD_INFO = 'AWAIT_BOARD_INFO'
 export const UPDATE_ACTIVE_SQUARE = 'UPDATE_ACTIVE_SQUARE'
