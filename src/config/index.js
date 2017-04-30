@@ -4,7 +4,7 @@ if (document.location.hostname == 'localhost'){
 
     config = {
         appEnv: 'dev',
-        api: 'http://api.underwaterchess.com'
+        api: 'http://localhost:5000'
     }
 
 }

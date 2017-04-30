@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
@@ -1621,3 +1622,13 @@ Please refer to [this section](#resolving-heroku-deployment-errors).
 ## Something Missing?
 
 If you have ideas for more “How To” recipes that should be on this page, [let us know](https://github.com/facebookincubator/create-react-app/issues) or [contribute some!](https://github.com/facebookincubator/create-react-app/edit/master/packages/react-scripts/template/README.md)
+=======
+# react-chess
+The UI for Underwater Chess
+
+To run locally, you will need the [API](https://github.com/ncksllvn/chess-api) to be running locally as well, or edit the dev config
+to use the public [API](http://api.underwaterchess.com). It is probably better you run it locally so that the public server 
+isn't bombarded. 
+
+Once the API is running, just run `npm install` and then `npm start`. Webpack should open your browser and get the whole thing going.
+>>>>>>> 8cd73719b6a32d046ed68cbc476d0fb120258e32
