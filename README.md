@@ -1,4 +1,4 @@
-# react-chess
+# React Chess
 The UI for Underwater Chess
 
 To run locally, you will need the [API](https://github.com/ncksllvn/chess-api) to be running locally as well, or edit the dev config
