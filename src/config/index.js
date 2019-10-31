@@ -1,21 +1,3 @@
-var config = null
-
-if (document.location.hostname == 'localhost'){
-
-    config = {
-        appEnv: 'dev',
-        api: 'http://localhost:5000'
-    }
-
+export default {
+    api: process.env.REACT_APP_API
 }
-
-else {
-
-    config = {
-        appEnv: 'dist',
-        api: 'http://api.underwaterchess.com'
-    }
-
-}
-
-export default config
