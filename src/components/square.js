@@ -21,7 +21,7 @@ export default class Square extends React.Component {
         ].join(' ')
     }
 
-    onClick(event){
+    onClick = (event) => {
 
         if (this.props.isLegalMoveForActiveSquare){
             this.props.makeMove()
