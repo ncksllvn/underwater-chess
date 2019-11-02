@@ -6,7 +6,7 @@ export default React.createClass({
     render(){
         return (
             <div onClick={this.onClick} className={this.classList()}>
-                {this.props.symbol ? SYMBOLS[this.props.symbol.toLowerCase()] : ''}
+                {this.props.symbol ? SYMBOLS[this.props.symbol] : ''}
             </div>
         )
     },
