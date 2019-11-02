@@ -1,7 +1,7 @@
 import React from 'react'
 import {SYMBOLS} from '../constants'
 
-export default React.createClass({
+export default class Square extends React.Component {
 
     render(){
         return (
@@ -9,7 +9,7 @@ export default React.createClass({
                 {this.props.symbol ? SYMBOLS[this.props.symbol] : ''}
             </div>
         )
-    },
+    }
 
     classList(){
         return [
@@ -19,9 +19,9 @@ export default React.createClass({
             this.props.isMovable ? 'movable' : '',
             this.props.symbol && this.props.symbol == this.props.symbol.toUpperCase() ? 'white-piece' : ''
         ].join(' ')
-    },
+    }
 
-    onClick(event){
+    onClick = (event) => {
 
         if (this.props.isLegalMoveForActiveSquare){
             this.props.makeMove()
@@ -31,4 +31,4 @@ export default React.createClass({
         this.props.isActive ? this.props.clearActiveSquare() : this.props.setAsActiveSquare()
     }
 
-})
+}

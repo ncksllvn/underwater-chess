@@ -3,21 +3,21 @@ import Board from './board'
 import LoadingIndicator from './loading-indicator'
 import {RESULTS} from '../constants'
 
-export default React.createClass({
+export default class Game extends React.Component {
 
     componentWillMount(){
         this.props.getBoardInfo()
-    },
+    }
 
     componentDidUpdate(){
         if (this.props.board.isGameOver){
             this.declareWinner()
         }
-    },
+    }
 
     shouldComponentUpdate(){
         return !this.props.board.isGameOver
-    },
+    }
 
     declareWinner(){
 
@@ -38,7 +38,7 @@ export default React.createClass({
 
         // delay the message so that the user has time to see the board first
         setTimeout(() => alert(message), 3000)
-    },
+    }
 
     render(){
 
@@ -50,4 +50,4 @@ export default React.createClass({
         )
     }
 
-})
+}
