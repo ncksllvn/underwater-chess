@@ -1516,17 +1516,17 @@ When you build the project, Create React App will place the `public` folder cont
 2. Install `serve` by running `npm install --save serve`.
 
 3. Add this line to `scripts` in `package.json`:
-
+    
     ```
     "now-start": "serve build/",
     ```
-
+    
 4. Run `now` from your project directory. You will see a **now.sh** URL in your output like this:
-
+    
     ```
     > Ready! https://your-project-dirname-tpspyhtdtk.now.sh (copied to clipboard)
     ```
-
+    
     Paste that URL into your browser when the build is complete, and you will see your deployed app.
 
 Details are available in [this article.](https://zeit.co/blog/now-static)
@@ -1621,12 +1621,3 @@ Please refer to [this section](#resolving-heroku-deployment-errors).
 ## Something Missing?
 
 If you have ideas for more “How To” recipes that should be on this page, [let us know](https://github.com/facebookincubator/create-react-app/issues) or [contribute some!](https://github.com/facebookincubator/create-react-app/edit/master/packages/react-scripts/template/README.md)
-=======
-# react-chess
-The UI for Underwater Chess
-
-To run locally, you will need the [API](https://github.com/ncksllvn/chess-api) to be running locally as well, or edit the dev config
-to use the public [API](http://api.underwaterchess.com). It is probably better you run it locally so that the public server
-isn't bombarded.
-
-Once the API is running, just run `npm install` and then `npm start`. Webpack should open your browser and get the whole thing going.
