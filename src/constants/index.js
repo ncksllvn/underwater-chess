@@ -5,13 +5,26 @@ const knight = 'n'
 const rook = 'r'
 const pawn = 'p'
 
+const whiteKing = 'K';
+const whiteQueen = 'Q';
+const whiteBishop = 'B';
+const whiteKnight = 'N';
+const whiteRook = 'R';
+const whitePawn = 'P';
+
 export const SYMBOLS = {
     [king]: '\u265A',
     [queen]: '\u265B',
     [rook]: '\u265C',
     [bishop]: '\u265D',
     [knight]: '\u265E',
-    [pawn]: '\u265F'
+    [pawn]: '\u265F',
+    [whiteKing]: '\u2654',
+    [whiteQueen]: '\u2655',
+    [whiteBishop]: '\u2657',
+    [whiteKnight]: '\u2658',
+    [whiteRook]: '\u2656',
+    [whitePawn]: '\u2659'
 }
 
 const blackWins = '0-1'
