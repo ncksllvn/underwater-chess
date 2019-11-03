@@ -1,4 +1,3 @@
-import React from 'react'
 import {connect} from 'react-redux'
 import {getBoardInfo} from '../actions'
 import Game from  '../components/game'

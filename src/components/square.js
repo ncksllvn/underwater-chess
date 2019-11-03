@@ -17,7 +17,7 @@ export default class Square extends React.Component {
             this.props.isActive ? 'active' : '',
             this.props.isLegalMoveForActiveSquare ? 'legal' : '',
             this.props.isMovable ? 'movable' : '',
-            this.props.symbol && this.props.symbol == this.props.symbol.toUpperCase() ? 'white-piece' : ''
+            this.props.symbol && this.props.symbol === this.props.symbol.toUpperCase() ? 'white-piece' : ''
         ].join(' ')
     }
 
