@@ -39,15 +39,16 @@ export function makeMove(toSquare){
 }
 
 export function doComputerMove(){
-    return function(dispatch, getState){
+    return async function(dispatch, getState){
 
         const { bestMove } = getState().board.turn
 
-        return new Promise((resolve) => {
-            setTimeout(() => {
-                dispatch(getBoardInfo(bestMove)).then(resolve)
-            }, 1000)
-        })
+        // Pause for a moment before doing the computer work
+        await new Promise((resolve) => {
+            setTimeout(resolve, 1000);
+        });
+
+        dispatch(getBoardInfo(bestMove));
     }
 }
 
