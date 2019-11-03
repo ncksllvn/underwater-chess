@@ -5,12 +5,12 @@ const knight = 'n'
 const rook = 'r'
 const pawn = 'p'
 
-const whiteKing = 'K';
-const whiteQueen = 'Q';
-const whiteBishop = 'B';
-const whiteKnight = 'N';
-const whiteRook = 'R';
-const whitePawn = 'P';
+const whiteKing = 'K'
+const whiteQueen = 'Q'
+const whiteBishop = 'B'
+const whiteKnight = 'N'
+const whiteRook = 'R'
+const whitePawn = 'P'
 
 export const SYMBOLS = {
     [king]: '\u265A',

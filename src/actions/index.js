@@ -21,7 +21,7 @@ export function getBoardInfo(move=''){
         dispatch(awaitBoardInfo())
 
         const response = await fetch(url, options)
-        const board = await response.json();
+        const board = await response.json()
 
         dispatch(updateBoard(board))
     }
@@ -33,8 +33,8 @@ export function makeMove(toSquare){
         const fromSquare = getState().activeSquareId
         const move = `${fromSquare}${toSquare}`
 
-        await dispatch(getBoardInfo(move));
-        dispatch(doComputerMove());
+        await dispatch(getBoardInfo(move))
+        dispatch(doComputerMove())
     }
 }
 

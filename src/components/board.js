@@ -41,7 +41,7 @@ function parseFen(fen) {
                 continue
             }
 
-            let i = 0;
+            let i = 0
             let numEmptySpaces = parseInt(char, 10)
 
             while (i++ < numEmptySpaces){
