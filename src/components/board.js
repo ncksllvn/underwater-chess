@@ -30,9 +30,9 @@ function parseFen(fen) {
 
     return boardFenRows.map(row => {
 
-        var rowExpanded = []
+        let rowExpanded = []
 
-        for (var charIndex in row){
+        for (let charIndex in row){
 
             let char = row[charIndex]
 
@@ -42,7 +42,7 @@ function parseFen(fen) {
             }
 
             let i = 0;
-            let numEmptySpaces = parseInt(char)
+            let numEmptySpaces = parseInt(char, 10)
 
             while (i++ < numEmptySpaces){
                 rowExpanded.push('')

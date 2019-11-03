@@ -8,7 +8,7 @@ export const UPDATE_ACTIVE_SQUARE = 'UPDATE_ACTIVE_SQUARE'
 export const UPDATE_BOARD = 'UPDATE_BOARD'
 
 export function getBoardInfo(move=''){
-    return function(dispatch, getState){
+    return async function(dispatch, getState){
 
         const fen = getState().board.fen || ''
         const fenParam = encodeURIComponent(fen)
@@ -20,29 +20,30 @@ export function getBoardInfo(move=''){
 
         dispatch(awaitBoardInfo())
 
-        return fetch(url, options).
-            then(res => res.json()).
-            then(board => dispatch(updateBoard(board)))
+        const response = await fetch(url, options)
+        const board = await response.json();
+
+        dispatch(updateBoard(board))
     }
 }
 
 export function makeMove(toSquare){
-    return function(dispatch, getState){
+    return async function(dispatch, getState){
 
         const fromSquare = getState().activeSquareId
         const move = `${fromSquare}${toSquare}`
 
-        return dispatch(getBoardInfo(move)).
-            then(() => dispatch(doComputerMove()))
+        await dispatch(getBoardInfo(move));
+        dispatch(doComputerMove());
     }
 }
 
 export function doComputerMove(){
     return function(dispatch, getState){
 
-        const bestMove = getState().board.turn.bestMove
+        const { bestMove } = getState().board.turn
 
-        return new Promise((resolve, reject) => {
+        return new Promise((resolve) => {
             setTimeout(() => {
                 dispatch(getBoardInfo(bestMove)).then(resolve)
             }, 1000)

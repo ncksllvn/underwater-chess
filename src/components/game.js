@@ -21,7 +21,7 @@ export default class Game extends React.Component {
 
     declareWinner(){
 
-        var message = ''
+        let message = ''
 
         switch (this.props.board.result){
             case RESULTS.whiteWins:
@@ -33,6 +33,7 @@ export default class Game extends React.Component {
                 break
 
             case RESULTS.tie:
+            default:
                 message = 'Tie!'
         }
 
