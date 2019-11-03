@@ -5,7 +5,7 @@ import {RESULTS} from '../constants'
 
 export default class Game extends React.Component {
 
-    componentWillMount(){
+    componentDidMount(){
         this.props.getBoardInfo()
     }
 
