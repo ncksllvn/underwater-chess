@@ -5,17 +5,21 @@ const cols = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']
 const rows = [8, 7, 6, 5, 4, 3, 2, 1]
 
 
-export default function({board}) {
+export default function({ board: { fen } }) {
 
     // convert from FEN to a 2D array
-    board = parseFen(board.fen)
+    const symbols = parseFen(fen)
 
     return (
         <div className="board">
             {rows.map((row, rowIndex) =>
                 <div className="board-row" key={row}>
                     {cols.map((col, colIndex) =>
-                        <Square id={`${col}${row}`} key={col} symbol={board[rowIndex][colIndex]}></Square>
+                        <Square
+                            id={`${col}${row}`}
+                            key={col}
+                            symbol={symbols[rowIndex][colIndex]}>
+                        </Square>
                     )}
                 </div>
             )}
