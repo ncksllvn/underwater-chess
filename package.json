@@ -2,6 +2,7 @@
   "name": "underwater-chess",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://ncksllvn.github.io/underwater-chess/",
   "engines": {
     "node": "12.13.0"
   },
