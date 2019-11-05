@@ -2,15 +2,6 @@ import React from 'react'
 import {SYMBOLS} from '../constants'
 
 export default class Square extends React.Component {
-
-    render(){
-        return (
-            <div onClick={this.onClick} className={this.classList()}>
-                {this.props.symbol ? SYMBOLS[this.props.symbol] : ''}
-            </div>
-        )
-    }
-
     classList(){
         return [
             'square',
@@ -31,4 +22,11 @@ export default class Square extends React.Component {
         this.props.isActive ? this.props.clearActiveSquare() : this.props.setAsActiveSquare()
     }
 
+    render(){
+        return (
+            <div onClick={this.onClick} className={this.classList()}>
+                {this.props.symbol ? SYMBOLS[this.props.symbol] : ''}
+            </div>
+        )
+    }
 }
