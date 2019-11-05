@@ -1,8 +1,10 @@
-# React Chess
-The UI for Underwater Chess
+# Underwater Chess
+The UI for Underwater Chess, written in React. See the [API](https://github.com/ncksllvn/chess-api).
 
-To run locally, you will need the [API](https://github.com/ncksllvn/chess-api) to be running locally as well, or edit the dev config
-to use the public [API](http://api.underwaterchess.com). It is probably better you run it locally so that the public server
-isn't bombarded.
+![Screenshot of Underwater Chess](./docs/img/underwater-chess.png)
 
-Once the API is running, just run `npm install` and then `npm start`. Webpack should open your browser and get the whole thing going.
+## How to run
+1. Copy `sample.env` to `.env`.
+    - Optionally, update `REACT_APP_API` to point to your local API instance.
+2. Run `npm install`
+3. Run `npm start`
